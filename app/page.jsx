@@ -9,6 +9,7 @@ import { CardHeader,CardTitle,CardContent} from "@/components/ui/card";
 import { Stethoscope } from "lucide-react";
 import { creditBenefits } from "@/lib/data";
 import { testimonials } from "@/lib/data";
+import Pricing from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -101,7 +102,8 @@ export default function Home() {
           </div>
           <div className="mx-auto">
             {/* <Pricing/> */}
-          {/* Clerk Pricing Table */}
+          
+            <Pricing/>
       
 
           {/* Description */}

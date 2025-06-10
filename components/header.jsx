@@ -6,12 +6,16 @@ import { SignUpButton } from '@clerk/nextjs';
 import { Button } from './ui/button';
 import { checkUser } from '@/lib/checkUser';
 import { User } from 'lucide-react';
-import { Badge } from 'lucide-react';
 import { CreditCard } from 'lucide-react';
 import { ShieldCheck, Stethoscope, Calendar } from 'lucide-react';
+import { checkAndAllocateCredits } from '@/actions/credit';
+import { Badge } from './ui/badge';
 
 const Header = async () => {
-const user=await checkUser();
+    const user=await checkUser();
+    if(user?.role === "PATIENT"){
+        await checkAndAllocateCredits(user);
+    }
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/60">
         <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -117,7 +121,6 @@ const user=await checkUser();
                     </Badge>
                     </Link>
                 )}
-
 
                 <SignedOut>
                 <SignInButton >

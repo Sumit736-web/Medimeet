@@ -8,7 +8,7 @@ import { checkUser } from '@/lib/checkUser';
 import { User } from 'lucide-react';
 import { CreditCard } from 'lucide-react';
 import { ShieldCheck, Stethoscope, Calendar } from 'lucide-react';
-import { checkAndAllocateCredits } from '@/actions/credit';
+import { checkAndAllocateCredits } from '@/actions/credits';
 import { Badge } from './ui/badge';
 
 const Header = async () => {

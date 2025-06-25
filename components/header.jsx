@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { SignUpButton } from '@clerk/nextjs';
 import { Button } from './ui/button';
-import { checkUser } from '@/lib/checkUser';
+import { checkUser } from '../lib/checkUser';
 import { User } from 'lucide-react';
 import { CreditCard } from 'lucide-react';
 import { ShieldCheck, Stethoscope, Calendar } from 'lucide-react';
